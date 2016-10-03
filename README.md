@@ -2,12 +2,15 @@
 
 Centro Universitário de Brasília - UniCEUB
 
-Álvaro Veiga
+Construção de Compiladores - 6º Período - Professor Eduardo Santos
 
-Felipe Alves
+Aluno / Usuário no GitHub:
 
-Lucas Cardoso
+Álvaro Veiga / tiovo
 
-Professor Eduardo Santos
+Felipe Alves / Lipoink
+
+Lucas Cardoso / lccherigath
+
 
 Construção de Analisador Léxico e Analisador Sintático para disciplina de Construção de Compiladores como projeto final.
