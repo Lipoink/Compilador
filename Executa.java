@@ -207,18 +207,24 @@ public class Executa extends javax.swing.JFrame {
     }                      
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+        try{
+            executar();
+        }catch(Exception e){e.printStackTrace();}
     }                                        
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        
-    }                                        
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
+        jTextAreaInsert.setText("");
     }                                        
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+        jButton2ActionPerformed(evt);
+        jButton4ActionPerformed(evt);
+    }    
+    
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
+        jTextArea1.setText("");
     }                                        
-
+                                    
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
