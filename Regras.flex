@@ -1,9 +1,9 @@
 package analisador;
 
-import static analisador.Token.*;
+import static analisador.Tokens.*;
 
 %%
-%class Analisador
+%class Lexemas
 %type Token
 
 LETRA = [a-zA-Z_]
