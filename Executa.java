@@ -2,6 +2,7 @@ package analisador;
 
 import java.awt.Color;
 import javax.swing.JTextArea;
+import java.io.StringReader;
 
 public class Executa extends javax.swing.JFrame {
 
