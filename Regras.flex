@@ -4,7 +4,7 @@ import static analisador.Tokens.*;
 
 %%
 %class Lexemas
-%type Token
+%type Tokens
 
 LETRA = [a-zA-Z_]
 DIGITO = [0-9]
