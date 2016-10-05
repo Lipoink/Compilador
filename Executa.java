@@ -7,6 +7,68 @@ public class Executa extends javax.swing.JFrame {
 
     public JTextArea jText;
     
+    public void executar()throws Exception{
+        
+       jText = jTextAreaInsert;
+       String expr;
+       expr = (String)jText.getText();
+       Lexemas lexemas = new Lexemas(new StringReader(expr));
+       
+       String resultado="";
+       
+       while(true){
+           Tokens token = lexemas.yylex();
+           if(token == null){
+               
+                jTextArea1.setText(resultado);
+                return;
+           }
+               
+               switch(token){
+                
+                case RESERVADO:
+                    resultado = resultado + "<Palavra_Reservada> " + lexemas.lexema + "\n";
+                    break;
+                case OPERADOR_ARITMETICO:
+                    resultado = resultado + "<Operador_Aritmético> "  + lexemas.lexema + "\n";
+                    break;
+                case OPERADOR_LOGICO:
+                    resultado = resultado + "<Operador_Lógico> "  + lexemas.lexema + "\n";
+                    break;
+                case OPERADOR_ATRIBUICAO:
+                    resultado = resultado + "<Operador_Atribuição> " + lexemas.lexema + "\n";
+                    break;
+                case OPERADOR_RELACIONAL:
+                    resultado = resultado + "<Operador_Relacional> " + lexemas.lexema + "\n";
+                    break;
+                case OPERADOR_BOOLEANO:
+                    resultado = resultado + "<Operador_Booleano> " + lexemas.lexema + "\n";
+                    break;
+                case SEPARADOR:
+                    resultado = resultado + "<Separador> " + lexemas.lexema + "\n";
+                    break;
+                case COMENTARIO:
+                    resultado = resultado + "<Comentario> " + lexemas.lexema + "\n";
+                    break;
+                 case ERROR:
+                    resultado = resultado + "<Erro, símbolo não reconhecido> \n";
+                     break;
+                case ID:
+                    resultado = resultado + "<ID> " + lexemas.lexema +"\n";
+                    break;
+                case NUMERO:
+                    resultado = resultado + "<Numero> " + lexemas.lexema + "\n";
+                    break;
+                case TIPO:
+                    resultado = resultado + "<Tipo> " + lexemas.lexema + "\n";
+                    break;
+                default:
+                    resultado = resultado + "<" + lexemas.lexema +">" ;
+                  
+           }
+       }
+    }
+    
     public Executa() {
         initComponents();
         getContentPane().setBackground(new Color (136,183,201));
